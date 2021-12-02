@@ -42,7 +42,8 @@ def test_image():
         for lm in lms:
             for i in range(0, 5):
                 cv2.circle(frame, (int(lm[i * 2]), int(lm[i * 2 + 1])), 2, (0, 0, 255), -1)
-    cv2.imshow('out', frame)
+    # cv2.imshow('out', frame)
+    cv2.imwrite('./out.jpg', frame)
     cv2.waitKey(0)
 
 
